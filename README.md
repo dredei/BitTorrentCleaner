@@ -2,7 +2,8 @@ BitTorrentCleaner
 =================
 
 Cleans up unnecessary .torrent files in BitTorrent (uTorrent) folder.
-Удаляет ненужные .torrent файлы в BitTorrent (uTorrent) папке.
+
+РЈРґР°Р»СЏРµС‚ РЅРµРЅСѓР¶РЅС‹Рµ .torrent С„Р°Р№Р»С‹ РІ BitTorrent (uTorrent) РїР°РїРєРµ.
 
 Using MonoTorrent.BEncoding: https://github.com/mono/monotorrent
 
