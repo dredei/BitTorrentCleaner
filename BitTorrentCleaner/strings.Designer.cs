@@ -61,6 +61,15 @@ namespace BitTorrentCleaner {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Закройте BitTorrent/uTorrent и нажмите &quot;OK&quot;!.
+        /// </summary>
+        internal static string CloseBT {
+            get {
+                return ResourceManager.GetString("CloseBT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Удалено: {0} ({1} файлов).
         /// </summary>
         internal static string Deleted {

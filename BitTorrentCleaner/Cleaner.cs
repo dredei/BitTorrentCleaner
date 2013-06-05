@@ -31,7 +31,7 @@ namespace BitTorrentCleaner
         {
             FileInfo fi = new FileInfo( file );
             return fi.Length;
-        }
+        }        
 
         public void Clean()
         {

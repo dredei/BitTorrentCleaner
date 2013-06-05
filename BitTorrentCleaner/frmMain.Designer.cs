@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.lblPathToResume = new System.Windows.Forms.Label();
             this.btnSelectPath = new System.Windows.Forms.Button();
             this.tbPath = new System.Windows.Forms.TextBox();
@@ -37,6 +38,8 @@
             this.tbLog = new System.Windows.Forms.TextBox();
             this.rbRus = new System.Windows.Forms.RadioButton();
             this.rbEng = new System.Windows.Forms.RadioButton();
+            this.lblSite = new System.Windows.Forms.Label();
+            this.fbd1 = new System.Windows.Forms.FolderBrowserDialog();
             this.SuspendLayout();
             // 
             // lblPathToResume
@@ -50,12 +53,14 @@
             // 
             // btnSelectPath
             // 
+            this.btnSelectPath.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSelectPath.Location = new System.Drawing.Point(279, 14);
             this.btnSelectPath.Name = "btnSelectPath";
             this.btnSelectPath.Size = new System.Drawing.Size(26, 23);
             this.btnSelectPath.TabIndex = 1;
             this.btnSelectPath.Text = "...";
             this.btnSelectPath.UseVisualStyleBackColor = true;
+            this.btnSelectPath.Click += new System.EventHandler(this.btnSelectPath_Click);
             // 
             // tbPath
             // 
@@ -129,6 +134,19 @@
             this.rbEng.UseVisualStyleBackColor = true;
             this.rbEng.CheckedChanged += new System.EventHandler(this.rbEng_CheckedChanged);
             // 
+            // lblSite
+            // 
+            this.lblSite.AutoSize = true;
+            this.lblSite.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblSite.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblSite.ForeColor = System.Drawing.Color.Blue;
+            this.lblSite.Location = new System.Drawing.Point(276, 179);
+            this.lblSite.Name = "lblSite";
+            this.lblSite.Size = new System.Drawing.Size(29, 13);
+            this.lblSite.TabIndex = 9;
+            this.lblSite.Text = "Site";
+            this.lblSite.Click += new System.EventHandler(this.lblSite_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -136,6 +154,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(307, 196);
+            this.Controls.Add(this.lblSite);
             this.Controls.Add(this.rbEng);
             this.Controls.Add(this.rbRus);
             this.Controls.Add(this.tbLog);
@@ -146,10 +165,11 @@
             this.Controls.Add(this.btnSelectPath);
             this.Controls.Add(this.lblPathToResume);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BitTorrentCleaner";
+            this.Text = "BitTorrent Cleaner";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -167,6 +187,8 @@
         private System.Windows.Forms.TextBox tbLog;
         private System.Windows.Forms.RadioButton rbRus;
         private System.Windows.Forms.RadioButton rbEng;
+        private System.Windows.Forms.Label lblSite;
+        private System.Windows.Forms.FolderBrowserDialog fbd1;
     }
 }
 

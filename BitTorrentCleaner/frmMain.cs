@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
@@ -21,6 +22,31 @@ namespace BitTorrentCleaner
         {
             InitializeComponent();
             setLocale();
+        }
+
+        private string getBitTorrentPath()
+        {
+            System.OperatingSystem os = System.Environment.OSVersion;
+            string path = string.Empty;
+            /*switch ( os.Platform )
+            {
+                case System.PlatformID.Win32NT:
+                    switch ( os.Version.Major )
+                    {
+                        case 5: // 2000 - XP
+                            path = Environment.GetFolderPath( Environment.SpecialFolder.ApplicationData )
+                                + @"\BitTorrent";
+                            break;
+                        case 6: // >=Vista
+                            path = Environment.GetFolderPath( Environment.SpecialFolder.ApplicationData ) 
+                                +@"\BitTorrent";
+                            break;
+                    }
+                    break;
+            }*/
+            path = Environment.GetFolderPath( Environment.SpecialFolder.ApplicationData )
+                                + @"\BitTorrent";
+            return path;
         }
 
         private void setLocale( string locale = "ru-Ru" )
@@ -69,12 +95,23 @@ namespace BitTorrentCleaner
 
         private void btnStart_Click( object sender, EventArgs e )
         {
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo( locale );
             tbLog.Clear();
             if ( !File.Exists( tbPath.Text + @"\resume.dat" ) )
             {
                 tbLog.AppendText( strings.WrongPath );
                 MessageBox.Show( strings.WrongPath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error );
                 return;
+            }
+            Process[] btp = Process.GetProcessesByName( "BitTorrent" );
+            Process[] up = Process.GetProcessesByName( "uTorrent" );
+            if ( btp.Length > 0 || up.Length > 0 )
+            {
+                MessageBox.Show( strings.CloseBT, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning );
+                if ( btp.Length > 0 )
+                    btp[ 0 ].WaitForExit();
+                if ( up.Length > 0 )
+                    up[ 0 ].WaitForExit();
             }
             btnStart.Enabled = false;
             thr = new Thread( work );
@@ -84,6 +121,7 @@ namespace BitTorrentCleaner
         private void frmMain_Load( object sender, EventArgs e )
         {
             System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = false;
+            tbPath.Text = getBitTorrentPath();
         }
 
         private void rbRus_CheckedChanged( object sender, EventArgs e )
@@ -99,6 +137,19 @@ namespace BitTorrentCleaner
             if ( rbEng.Checked )
             {
                 setLocale( "en-Us" );
+            }
+        }
+
+        private void lblSite_Click( object sender, EventArgs e )
+        {
+            Process.Start( @"http://softez.pp.ua/" );
+        }
+
+        private void btnSelectPath_Click( object sender, EventArgs e )
+        {
+            if ( fbd1.ShowDialog() == DialogResult.OK )
+            {
+                tbPath.Text = fbd1.SelectedPath;
             }
         }
     }
