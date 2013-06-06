@@ -17,6 +17,9 @@ namespace BitTorrentCleaner
     {
         Thread thr = null;
         string locale = "ru-Ru";
+        string done;
+        string wrongPath;
+        string closeBT;
 
         public frmMain()
         {
@@ -26,24 +29,7 @@ namespace BitTorrentCleaner
 
         private string getBitTorrentPath()
         {
-            System.OperatingSystem os = System.Environment.OSVersion;
             string path = string.Empty;
-            /*switch ( os.Platform )
-            {
-                case System.PlatformID.Win32NT:
-                    switch ( os.Version.Major )
-                    {
-                        case 5: // 2000 - XP
-                            path = Environment.GetFolderPath( Environment.SpecialFolder.ApplicationData )
-                                + @"\BitTorrent";
-                            break;
-                        case 6: // >=Vista
-                            path = Environment.GetFolderPath( Environment.SpecialFolder.ApplicationData ) 
-                                +@"\BitTorrent";
-                            break;
-                    }
-                    break;
-            }*/
             path = Environment.GetFolderPath( Environment.SpecialFolder.ApplicationData )
                                 + @"\BitTorrent";
             return path;
@@ -55,16 +41,19 @@ namespace BitTorrentCleaner
             lblPathToResume.Text = strings.PathToResumeDat;
             lblDeleted.Text = strings.Deleted.f( 0, 0 );
             btnStart.Text = strings.Start;
+            this.done = strings.Done;
+            this.wrongPath = strings.WrongPath;
+            this.closeBT = strings.CloseBT;
             this.locale = locale;
         }
 
         private void work()
         {
-            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo( locale );
+            setLocale( locale );
             Cleaner cln = new Cleaner( tbPath.Text );
             cln.updEvent += new EventHandler<UpdEventArgs>( updProgress );
             cln.Clean();
-            MessageBox.Show( strings.Done, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information );
+            MessageBox.Show( this.done, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information );
             btnStart.Enabled = true;
             tbLog.AppendText( strings.Done );
         }
@@ -86,7 +75,7 @@ namespace BitTorrentCleaner
         {
             pbAll.Maximum = e.maxProgress;
             pbAll.Value = e.progress;
-            if ( !string.IsNullOrEmpty( e.msg ) )
+            if ( !string.IsNullOrEmpty( e.msg ) && tbLog.Text.IndexOf( e.msg ) < 0 )
             {
                 tbLog.AppendText( e.msg + "\n" );
             }
@@ -95,23 +84,31 @@ namespace BitTorrentCleaner
 
         private void btnStart_Click( object sender, EventArgs e )
         {
-            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo( locale );
+            setLocale( locale );
             tbLog.Clear();
             if ( !File.Exists( tbPath.Text + @"\resume.dat" ) )
             {
-                tbLog.AppendText( strings.WrongPath );
-                MessageBox.Show( strings.WrongPath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error );
+                tbLog.AppendText( this.wrongPath );
+                MessageBox.Show( this.wrongPath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error );
                 return;
             }
-            Process[] btp = Process.GetProcessesByName( "BitTorrent" );
-            Process[] up = Process.GetProcessesByName( "uTorrent" );
-            if ( btp.Length > 0 || up.Length > 0 )
+            if ( tbPath.Text.IndexOf( "BitTorrent" ) >= 0 )
             {
-                MessageBox.Show( strings.CloseBT, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning );
+                Process[] btp = Process.GetProcessesByName( "BitTorrent" );
                 if ( btp.Length > 0 )
+                {
+                    MessageBox.Show( this.closeBT, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning );
                     btp[ 0 ].WaitForExit();
+                }
+            }
+            else if ( tbPath.Text.IndexOf( "uTorrent" ) >= 0 )
+            {
+                Process[] up = Process.GetProcessesByName( "uTorrent" );
                 if ( up.Length > 0 )
+                {
+                    MessageBox.Show( this.closeBT, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning );
                     up[ 0 ].WaitForExit();
+                }
             }
             btnStart.Enabled = false;
             thr = new Thread( work );

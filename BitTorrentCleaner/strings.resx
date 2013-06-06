@@ -124,7 +124,7 @@
     <value>Удалено: {0} ({1} файлов)</value>
   </data>
   <data name="DeletingFile" xml:space="preserve">
-    <value>Удаляем файл {0}...</value>
+    <value>Удаляем файл "{0}"...</value>
   </data>
   <data name="Done" xml:space="preserve">
     <value>Завершено.</value>

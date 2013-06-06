@@ -79,7 +79,7 @@ namespace BitTorrentCleaner {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Удаляем файл {0}....
+        ///   Ищет локализованную строку, похожую на Удаляем файл &quot;{0}&quot;....
         /// </summary>
         internal static string DeletingFile {
             get {
