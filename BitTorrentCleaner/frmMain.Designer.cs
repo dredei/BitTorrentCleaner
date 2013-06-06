@@ -40,6 +40,7 @@
             this.rbEng = new System.Windows.Forms.RadioButton();
             this.lblSite = new System.Windows.Forms.Label();
             this.fbd1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.cbRecycle = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lblPathToResume
@@ -147,6 +148,19 @@
             this.lblSite.Text = "Site";
             this.lblSite.Click += new System.EventHandler(this.lblSite_Click);
             // 
+            // cbRecycle
+            // 
+            this.cbRecycle.AutoSize = true;
+            this.cbRecycle.Checked = true;
+            this.cbRecycle.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbRecycle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbRecycle.Location = new System.Drawing.Point(141, 178);
+            this.cbRecycle.Name = "cbRecycle";
+            this.cbRecycle.Size = new System.Drawing.Size(122, 17);
+            this.cbRecycle.TabIndex = 10;
+            this.cbRecycle.Text = "Удалять в корзину";
+            this.cbRecycle.UseVisualStyleBackColor = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,6 +168,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(307, 196);
+            this.Controls.Add(this.cbRecycle);
             this.Controls.Add(this.lblSite);
             this.Controls.Add(this.rbEng);
             this.Controls.Add(this.rbRus);
@@ -189,6 +204,7 @@
         private System.Windows.Forms.RadioButton rbEng;
         private System.Windows.Forms.Label lblSite;
         private System.Windows.Forms.FolderBrowserDialog fbd1;
+        private System.Windows.Forms.CheckBox cbRecycle;
     }
 }
 

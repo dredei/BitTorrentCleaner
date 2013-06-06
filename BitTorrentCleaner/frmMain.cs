@@ -41,6 +41,7 @@ namespace BitTorrentCleaner
             lblPathToResume.Text = strings.PathToResumeDat;
             lblDeleted.Text = strings.Deleted.f( 0, 0 );
             btnStart.Text = strings.Start;
+            cbRecycle.Text = strings.RemoveRecycle;
             this.done = strings.Done;
             this.wrongPath = strings.WrongPath;
             this.closeBT = strings.CloseBT;
@@ -52,7 +53,7 @@ namespace BitTorrentCleaner
             setLocale( locale );
             Cleaner cln = new Cleaner( tbPath.Text );
             cln.updEvent += new EventHandler<UpdEventArgs>( updProgress );
-            cln.Clean();
+            cln.Clean( cbRecycle.Checked );
             MessageBox.Show( this.done, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information );
             btnStart.Enabled = true;
             tbLog.AppendText( strings.Done );
@@ -144,6 +145,7 @@ namespace BitTorrentCleaner
 
         private void btnSelectPath_Click( object sender, EventArgs e )
         {
+            fbd1.SelectedPath = tbPath.Text;
             if ( fbd1.ShowDialog() == DialogResult.OK )
             {
                 tbPath.Text = fbd1.SelectedPath;

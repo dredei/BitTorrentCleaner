@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using MonoTorrent.BEncoding;
+using Microsoft.VisualBasic.FileIO;
 
 namespace BitTorrentCleaner
 {
@@ -31,9 +32,9 @@ namespace BitTorrentCleaner
         {
             FileInfo fi = new FileInfo( file );
             return fi.Length;
-        }        
+        }
 
-        public void Clean()
+        public void Clean( bool moveToRecycle )
         {
             cleanSize = 0;
             UpdEventArgs args = new UpdEventArgs();
@@ -49,8 +50,13 @@ namespace BitTorrentCleaner
                 string fileName = Path.GetFileName( torrentFilesList[ i ] );
                 if ( !resume.ContainsKey( new BEncodedString( fileName ) ) )
                 {
+                    RecycleOption ro = RecycleOption.DeletePermanently;
+                    if ( moveToRecycle )
+                    {
+                        ro = RecycleOption.SendToRecycleBin;
+                    }
                     cleanSize += getFileSize( torrentFilesList[ i ] );
-                    File.Delete( torrentFilesList[ i ] );
+                    FileSystem.DeleteFile( torrentFilesList[ i ], UIOption.OnlyErrorDialogs, ro );
                     args.msg = strings.DeletingFile.f( fileName );
                     args.cleanSize = cleanSize;
                     args.deletedCount++;

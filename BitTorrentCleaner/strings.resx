@@ -132,6 +132,9 @@
   <data name="PathToResumeDat" xml:space="preserve">
     <value>Путь к файлу resume.dat:</value>
   </data>
+  <data name="RemoveRecycle" xml:space="preserve">
+    <value>Удалять в корзину</value>
+  </data>
   <data name="Start" xml:space="preserve">
     <value>Старт</value>
   </data>
