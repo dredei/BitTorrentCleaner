@@ -31,7 +31,12 @@ namespace BitTorrentCleaner
         {
             string path = string.Empty;
             path = Environment.GetFolderPath( Environment.SpecialFolder.ApplicationData )
-                                + @"\BitTorrent";
+                + @"\BitTorrent";
+            if ( !File.Exists( path + @"\resume.dat" ) )
+            {
+                path = Environment.GetFolderPath( Environment.SpecialFolder.ApplicationData )
+                + @"\uTorrent";
+            }
             return path;
         }
 
@@ -78,7 +83,7 @@ namespace BitTorrentCleaner
             pbAll.Value = e.progress;
             if ( !string.IsNullOrEmpty( e.msg ) && tbLog.Text.IndexOf( e.msg ) < 0 )
             {
-                tbLog.AppendText( e.msg + "\n" );
+                tbLog.AppendText( e.msg + "\r\n" );
             }
             lblDeleted.Text = strings.Deleted.f( hSize( e.cleanSize ), e.deletedCount );
         }
