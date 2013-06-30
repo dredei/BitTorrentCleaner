@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using ExtensionMethods;
 
 namespace BitTorrentCleaner
 {
@@ -43,7 +44,7 @@ namespace BitTorrentCleaner
         private void setLocale( string locale = "ru-Ru" )
         {
             Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo( locale );
-            lblPathToResume.Text = strings.PathToResumeDat;
+            lblPathToTorrents.Text = strings.PathToResumeDat;
             lblDeleted.Text = strings.Deleted.f( 0, 0 );
             btnStart.Text = strings.Start;
             cbRecycle.Text = strings.RemoveRecycle;
@@ -155,14 +156,6 @@ namespace BitTorrentCleaner
             {
                 tbPath.Text = fbd1.SelectedPath;
             }
-        }
-    }
-
-    public static class ExtensionMethods
-    {
-        public static string f( this string str, params object[] args )
-        {
-            return string.Format( str, args );
         }
     }
 }

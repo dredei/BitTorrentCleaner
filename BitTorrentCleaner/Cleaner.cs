@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using MonoTorrent.BEncoding;
 using Microsoft.VisualBasic.FileIO;
+using ExtensionMethods;
 
 namespace BitTorrentCleaner
 {
@@ -19,13 +20,15 @@ namespace BitTorrentCleaner
 
     class Cleaner
     {
-        string path;
+        string torrentsPath;
+        string resumePath;
         public event EventHandler<UpdEventArgs> updEvent = delegate { };
         long cleanSize = 0;
 
-        public Cleaner( string path )
+        public Cleaner( string torrentsPath, string resumePath )
         {
-            this.path = path;
+            this.torrentsPath = torrentsPath;
+            this.resumePath = resumePath;
         }
 
         public long getFileSize( string file )
@@ -39,8 +42,8 @@ namespace BitTorrentCleaner
             cleanSize = 0;
             UpdEventArgs args = new UpdEventArgs();
             BEncodedDictionary resume;
-            resume = BEncodedValue.Decode<BEncodedDictionary>( File.ReadAllBytes( path + @"\resume.dat" ) );
-            string[] torrentFilesList = Directory.GetFiles( this.path, @"*.torrent", System.IO.SearchOption.TopDirectoryOnly );
+            resume = BEncodedValue.Decode<BEncodedDictionary>( File.ReadAllBytes( this.resumePath ) );
+            string[] torrentFilesList = Directory.GetFiles( this.torrentsPath, @"*.torrent", System.IO.SearchOption.TopDirectoryOnly );
             args.maxProgress = torrentFilesList.Length;
             args.progress = 0;
             args.deletedCount = 0;
@@ -57,7 +60,7 @@ namespace BitTorrentCleaner
                     }
                     cleanSize += getFileSize( torrentFilesList[ i ] );
                     FileSystem.DeleteFile( torrentFilesList[ i ], UIOption.OnlyErrorDialogs, ro );
-                    args.msg = strings.DeletingFile.f( fileName );
+                    args.msg = strings.DeletingFile.f( fileName );                    
                     args.cleanSize = cleanSize;
                     args.deletedCount++;
                 }

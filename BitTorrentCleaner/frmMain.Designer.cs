@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            this.lblPathToResume = new System.Windows.Forms.Label();
+            this.lblPathToTorrents = new System.Windows.Forms.Label();
             this.btnSelectPath = new System.Windows.Forms.Button();
             this.tbPath = new System.Windows.Forms.TextBox();
             this.pbAll = new System.Windows.Forms.ProgressBar();
@@ -41,21 +41,24 @@
             this.lblSite = new System.Windows.Forms.Label();
             this.fbd1 = new System.Windows.Forms.FolderBrowserDialog();
             this.cbRecycle = new System.Windows.Forms.CheckBox();
+            this.lblPathToResume = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnSelResumePath = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lblPathToResume
+            // lblPathToTorrents
             // 
-            this.lblPathToResume.AutoSize = true;
-            this.lblPathToResume.Location = new System.Drawing.Point(0, 0);
-            this.lblPathToResume.Name = "lblPathToResume";
-            this.lblPathToResume.Size = new System.Drawing.Size(132, 13);
-            this.lblPathToResume.TabIndex = 0;
-            this.lblPathToResume.Text = "Путь к файлу resume.dat:";
+            this.lblPathToTorrents.AutoSize = true;
+            this.lblPathToTorrents.Location = new System.Drawing.Point(0, 39);
+            this.lblPathToTorrents.Name = "lblPathToTorrents";
+            this.lblPathToTorrents.Size = new System.Drawing.Size(177, 13);
+            this.lblPathToTorrents.TabIndex = 0;
+            this.lblPathToTorrents.Text = "Путь к папке с торрент-файлами:";
             // 
             // btnSelectPath
             // 
             this.btnSelectPath.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSelectPath.Location = new System.Drawing.Point(279, 14);
+            this.btnSelectPath.Location = new System.Drawing.Point(279, 53);
             this.btnSelectPath.Name = "btnSelectPath";
             this.btnSelectPath.Size = new System.Drawing.Size(26, 23);
             this.btnSelectPath.TabIndex = 1;
@@ -65,7 +68,7 @@
             // 
             // tbPath
             // 
-            this.tbPath.Location = new System.Drawing.Point(3, 16);
+            this.tbPath.Location = new System.Drawing.Point(3, 55);
             this.tbPath.Name = "tbPath";
             this.tbPath.Size = new System.Drawing.Size(270, 20);
             this.tbPath.TabIndex = 2;
@@ -73,7 +76,7 @@
             // 
             // pbAll
             // 
-            this.pbAll.Location = new System.Drawing.Point(3, 42);
+            this.pbAll.Location = new System.Drawing.Point(3, 81);
             this.pbAll.Name = "pbAll";
             this.pbAll.Size = new System.Drawing.Size(302, 15);
             this.pbAll.Step = 1;
@@ -82,7 +85,7 @@
             // btnStart
             // 
             this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStart.Location = new System.Drawing.Point(3, 148);
+            this.btnStart.Location = new System.Drawing.Point(3, 187);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(302, 23);
             this.btnStart.TabIndex = 4;
@@ -93,7 +96,7 @@
             // lblDeleted
             // 
             this.lblDeleted.AutoSize = true;
-            this.lblDeleted.Location = new System.Drawing.Point(0, 60);
+            this.lblDeleted.Location = new System.Drawing.Point(0, 99);
             this.lblDeleted.Name = "lblDeleted";
             this.lblDeleted.Size = new System.Drawing.Size(54, 13);
             this.lblDeleted.TabIndex = 5;
@@ -101,7 +104,7 @@
             // 
             // tbLog
             // 
-            this.tbLog.Location = new System.Drawing.Point(3, 76);
+            this.tbLog.Location = new System.Drawing.Point(3, 115);
             this.tbLog.Multiline = true;
             this.tbLog.Name = "tbLog";
             this.tbLog.ReadOnly = true;
@@ -114,7 +117,7 @@
             this.rbRus.AutoSize = true;
             this.rbRus.Checked = true;
             this.rbRus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbRus.Location = new System.Drawing.Point(3, 177);
+            this.rbRus.Location = new System.Drawing.Point(3, 216);
             this.rbRus.Name = "rbRus";
             this.rbRus.Size = new System.Drawing.Size(67, 17);
             this.rbRus.TabIndex = 7;
@@ -127,7 +130,7 @@
             // 
             this.rbEng.AutoSize = true;
             this.rbEng.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbEng.Location = new System.Drawing.Point(76, 177);
+            this.rbEng.Location = new System.Drawing.Point(76, 216);
             this.rbEng.Name = "rbEng";
             this.rbEng.Size = new System.Drawing.Size(59, 17);
             this.rbEng.TabIndex = 8;
@@ -141,7 +144,7 @@
             this.lblSite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblSite.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblSite.ForeColor = System.Drawing.Color.Blue;
-            this.lblSite.Location = new System.Drawing.Point(276, 179);
+            this.lblSite.Location = new System.Drawing.Point(276, 218);
             this.lblSite.Name = "lblSite";
             this.lblSite.Size = new System.Drawing.Size(29, 13);
             this.lblSite.TabIndex = 9;
@@ -154,12 +157,39 @@
             this.cbRecycle.Checked = true;
             this.cbRecycle.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbRecycle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbRecycle.Location = new System.Drawing.Point(141, 178);
+            this.cbRecycle.Location = new System.Drawing.Point(141, 217);
             this.cbRecycle.Name = "cbRecycle";
             this.cbRecycle.Size = new System.Drawing.Size(122, 17);
             this.cbRecycle.TabIndex = 10;
             this.cbRecycle.Text = "Удалять в корзину";
             this.cbRecycle.UseVisualStyleBackColor = true;
+            // 
+            // lblPathToResume
+            // 
+            this.lblPathToResume.AutoSize = true;
+            this.lblPathToResume.Location = new System.Drawing.Point(0, 0);
+            this.lblPathToResume.Name = "lblPathToResume";
+            this.lblPathToResume.Size = new System.Drawing.Size(98, 13);
+            this.lblPathToResume.TabIndex = 11;
+            this.lblPathToResume.Text = "Путь к resume.dat:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(3, 16);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(270, 20);
+            this.textBox1.TabIndex = 12;
+            this.textBox1.Text = "c:\\Users\\Home\\AppData\\Roaming\\BitTorrent\\resume.dat";
+            // 
+            // btnSelResumePath
+            // 
+            this.btnSelResumePath.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelResumePath.Location = new System.Drawing.Point(279, 14);
+            this.btnSelResumePath.Name = "btnSelResumePath";
+            this.btnSelResumePath.Size = new System.Drawing.Size(26, 23);
+            this.btnSelResumePath.TabIndex = 13;
+            this.btnSelResumePath.Text = "...";
+            this.btnSelResumePath.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
@@ -167,7 +197,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(307, 196);
+            this.ClientSize = new System.Drawing.Size(307, 236);
+            this.Controls.Add(this.btnSelResumePath);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblPathToResume);
             this.Controls.Add(this.cbRecycle);
             this.Controls.Add(this.lblSite);
             this.Controls.Add(this.rbEng);
@@ -178,7 +211,7 @@
             this.Controls.Add(this.pbAll);
             this.Controls.Add(this.tbPath);
             this.Controls.Add(this.btnSelectPath);
-            this.Controls.Add(this.lblPathToResume);
+            this.Controls.Add(this.lblPathToTorrents);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -193,7 +226,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblPathToResume;
+        private System.Windows.Forms.Label lblPathToTorrents;
         private System.Windows.Forms.Button btnSelectPath;
         private System.Windows.Forms.TextBox tbPath;
         private System.Windows.Forms.ProgressBar pbAll;
@@ -205,6 +238,9 @@
         private System.Windows.Forms.Label lblSite;
         private System.Windows.Forms.FolderBrowserDialog fbd1;
         private System.Windows.Forms.CheckBox cbRecycle;
+        private System.Windows.Forms.Label lblPathToResume;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnSelResumePath;
     }
 }
 
