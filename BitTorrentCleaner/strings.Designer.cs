@@ -106,6 +106,15 @@ namespace BitTorrentCleaner {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Путь к папке с торрент-файлами:.
+        /// </summary>
+        internal static string PathToTorrents {
+            get {
+                return ResourceManager.GetString("PathToTorrents", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Удалять в корзину.
         /// </summary>
         internal static string RemoveRecycle {

@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using ExtensionMethods;
+using Ini;
 
 namespace BitTorrentCleaner
 {
@@ -41,11 +42,28 @@ namespace BitTorrentCleaner
             return path;
         }
 
+        private void saveSettings()
+        {
+            IniFile ini = new IniFile( Application.StartupPath + @"\Settings.ini" );
+            ini.Write( "TorrentsPath", tbTorrentsPath.Text, "Options" );
+            ini.Write( "ResumePath", tbResumePath.Text, "Options" );
+            ini.Write( "RemoveToRec", cbRecycle.Checked.ToString(), "Options" );
+        }
+
+        private void loadSettings()
+        {
+            IniFile ini = new IniFile( Application.StartupPath + @"\Settings.ini" );
+            tbTorrentsPath.Text = ini.Read( "TorrentsPath", "Options", tbTorrentsPath.Text );
+            tbResumePath.Text = ini.Read( "ResumePath", "Options", tbResumePath.Text );
+            cbRecycle.Checked = bool.Parse( ini.Read( "RemoveToRec", "Options", cbRecycle.Checked.ToString() ) );
+        }
+
         private void setLocale( string locale = "ru-Ru" )
         {
             Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo( locale );
-            lblPathToTorrents.Text = strings.PathToResumeDat;
+            lblPathToTorrents.Text = strings.PathToTorrents;
             lblDeleted.Text = strings.Deleted.f( 0, 0 );
+            lblPathToResume.Text = strings.PathToResumeDat;
             btnStart.Text = strings.Start;
             cbRecycle.Text = strings.RemoveRecycle;
             this.done = strings.Done;
@@ -57,25 +75,12 @@ namespace BitTorrentCleaner
         private void work()
         {
             setLocale( locale );
-            Cleaner cln = new Cleaner( tbPath.Text );
+            Cleaner cln = new Cleaner( tbTorrentsPath.Text, tbResumePath.Text );
             cln.updEvent += new EventHandler<UpdEventArgs>( updProgress );
             cln.Clean( cbRecycle.Checked );
             MessageBox.Show( this.done, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information );
             btnStart.Enabled = true;
             tbLog.AppendText( strings.Done );
-        }
-
-        private string hSize( long sizeB )
-        {
-            string[] sizes = { "B", "KB", "MB", "GB" };
-            int order = 0;
-            while ( sizeB >= 1024 && order + 1 < sizes.Length )
-            {
-                order++;
-                sizeB = sizeB / 1024;
-            }
-            string result = String.Format( "{0:0.##} {1}", sizeB, sizes[ order ] );
-            return result;
         }
 
         private void updProgress( object sender, UpdEventArgs e )
@@ -86,36 +91,30 @@ namespace BitTorrentCleaner
             {
                 tbLog.AppendText( e.msg + "\r\n" );
             }
-            lblDeleted.Text = strings.Deleted.f( hSize( e.cleanSize ), e.deletedCount );
+            lblDeleted.Text = strings.Deleted.f( ExMethods.getSizeReadable( e.cleanSize ), e.deletedCount );
         }
 
         private void btnStart_Click( object sender, EventArgs e )
         {
             setLocale( locale );
             tbLog.Clear();
-            if ( !File.Exists( tbPath.Text + @"\resume.dat" ) )
+            if ( !File.Exists( tbResumePath.Text ) )
             {
                 tbLog.AppendText( this.wrongPath );
                 MessageBox.Show( this.wrongPath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error );
                 return;
             }
-            if ( tbPath.Text.IndexOf( "BitTorrent" ) >= 0 )
+            Process[] btp = Process.GetProcessesByName( "BitTorrent" );
+            if ( btp.Length > 0 )
             {
-                Process[] btp = Process.GetProcessesByName( "BitTorrent" );
-                if ( btp.Length > 0 )
-                {
-                    MessageBox.Show( this.closeBT, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning );
-                    btp[ 0 ].WaitForExit();
-                }
+                MessageBox.Show( this.closeBT, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning );
+                btp[ 0 ].WaitForExit();
             }
-            else if ( tbPath.Text.IndexOf( "uTorrent" ) >= 0 )
+            Process[] up = Process.GetProcessesByName( "uTorrent" );
+            if ( up.Length > 0 )
             {
-                Process[] up = Process.GetProcessesByName( "uTorrent" );
-                if ( up.Length > 0 )
-                {
-                    MessageBox.Show( this.closeBT, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning );
-                    up[ 0 ].WaitForExit();
-                }
+                MessageBox.Show( this.closeBT, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning );
+                up[ 0 ].WaitForExit();
             }
             btnStart.Enabled = false;
             thr = new Thread( work );
@@ -125,7 +124,9 @@ namespace BitTorrentCleaner
         private void frmMain_Load( object sender, EventArgs e )
         {
             System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = false;
-            tbPath.Text = getBitTorrentPath();
+            tbTorrentsPath.Text = getBitTorrentPath();
+            tbResumePath.Text = tbTorrentsPath.Text + @"\resume.dat";
+            this.loadSettings();
         }
 
         private void rbRus_CheckedChanged( object sender, EventArgs e )
@@ -151,10 +152,23 @@ namespace BitTorrentCleaner
 
         private void btnSelectPath_Click( object sender, EventArgs e )
         {
-            fbd1.SelectedPath = tbPath.Text;
+            fbd1.SelectedPath = tbTorrentsPath.Text;
             if ( fbd1.ShowDialog() == DialogResult.OK )
             {
-                tbPath.Text = fbd1.SelectedPath;
+                tbTorrentsPath.Text = fbd1.SelectedPath;
+            }
+        }
+
+        private void frmMain_FormClosed( object sender, FormClosedEventArgs e )
+        {
+            this.saveSettings();
+        }
+
+        private void btnSelResumePath_Click( object sender, EventArgs e )
+        {
+            if ( ofdResume.ShowDialog() == DialogResult.OK )
+            {
+                tbResumePath.Text = ofdResume.FileName;
             }
         }
     }

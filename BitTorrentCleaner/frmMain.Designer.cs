@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.lblPathToTorrents = new System.Windows.Forms.Label();
             this.btnSelectPath = new System.Windows.Forms.Button();
-            this.tbPath = new System.Windows.Forms.TextBox();
+            this.tbTorrentsPath = new System.Windows.Forms.TextBox();
             this.pbAll = new System.Windows.Forms.ProgressBar();
             this.btnStart = new System.Windows.Forms.Button();
             this.lblDeleted = new System.Windows.Forms.Label();
@@ -42,8 +42,9 @@
             this.fbd1 = new System.Windows.Forms.FolderBrowserDialog();
             this.cbRecycle = new System.Windows.Forms.CheckBox();
             this.lblPathToResume = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbResumePath = new System.Windows.Forms.TextBox();
             this.btnSelResumePath = new System.Windows.Forms.Button();
+            this.ofdResume = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // lblPathToTorrents
@@ -66,13 +67,13 @@
             this.btnSelectPath.UseVisualStyleBackColor = true;
             this.btnSelectPath.Click += new System.EventHandler(this.btnSelectPath_Click);
             // 
-            // tbPath
+            // tbTorrentsPath
             // 
-            this.tbPath.Location = new System.Drawing.Point(3, 55);
-            this.tbPath.Name = "tbPath";
-            this.tbPath.Size = new System.Drawing.Size(270, 20);
-            this.tbPath.TabIndex = 2;
-            this.tbPath.Text = "c:\\Users\\Home\\AppData\\Roaming\\BitTorrent\\";
+            this.tbTorrentsPath.Location = new System.Drawing.Point(3, 55);
+            this.tbTorrentsPath.Name = "tbTorrentsPath";
+            this.tbTorrentsPath.Size = new System.Drawing.Size(270, 20);
+            this.tbTorrentsPath.TabIndex = 2;
+            this.tbTorrentsPath.Text = "c:\\Users\\Home\\AppData\\Roaming\\BitTorrent\\";
             // 
             // pbAll
             // 
@@ -173,13 +174,13 @@
             this.lblPathToResume.TabIndex = 11;
             this.lblPathToResume.Text = "Путь к resume.dat:";
             // 
-            // textBox1
+            // tbResumePath
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(270, 20);
-            this.textBox1.TabIndex = 12;
-            this.textBox1.Text = "c:\\Users\\Home\\AppData\\Roaming\\BitTorrent\\resume.dat";
+            this.tbResumePath.Location = new System.Drawing.Point(3, 16);
+            this.tbResumePath.Name = "tbResumePath";
+            this.tbResumePath.Size = new System.Drawing.Size(270, 20);
+            this.tbResumePath.TabIndex = 12;
+            this.tbResumePath.Text = "c:\\Users\\Home\\AppData\\Roaming\\BitTorrent\\resume.dat";
             // 
             // btnSelResumePath
             // 
@@ -190,6 +191,12 @@
             this.btnSelResumePath.TabIndex = 13;
             this.btnSelResumePath.Text = "...";
             this.btnSelResumePath.UseVisualStyleBackColor = true;
+            this.btnSelResumePath.Click += new System.EventHandler(this.btnSelResumePath_Click);
+            // 
+            // ofdResume
+            // 
+            this.ofdResume.FileName = "resume.dat";
+            this.ofdResume.Filter = "resume.dat|resume.dat";
             // 
             // frmMain
             // 
@@ -199,7 +206,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(307, 236);
             this.Controls.Add(this.btnSelResumePath);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbResumePath);
             this.Controls.Add(this.lblPathToResume);
             this.Controls.Add(this.cbRecycle);
             this.Controls.Add(this.lblSite);
@@ -209,7 +216,7 @@
             this.Controls.Add(this.lblDeleted);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.pbAll);
-            this.Controls.Add(this.tbPath);
+            this.Controls.Add(this.tbTorrentsPath);
             this.Controls.Add(this.btnSelectPath);
             this.Controls.Add(this.lblPathToTorrents);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -217,7 +224,8 @@
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BitTorrent Cleaner";
+            this.Text = "BitTorrent Cleaner v1.0.1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -228,7 +236,7 @@
 
         private System.Windows.Forms.Label lblPathToTorrents;
         private System.Windows.Forms.Button btnSelectPath;
-        private System.Windows.Forms.TextBox tbPath;
+        private System.Windows.Forms.TextBox tbTorrentsPath;
         private System.Windows.Forms.ProgressBar pbAll;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label lblDeleted;
@@ -239,8 +247,9 @@
         private System.Windows.Forms.FolderBrowserDialog fbd1;
         private System.Windows.Forms.CheckBox cbRecycle;
         private System.Windows.Forms.Label lblPathToResume;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbResumePath;
         private System.Windows.Forms.Button btnSelResumePath;
+        private System.Windows.Forms.OpenFileDialog ofdResume;
     }
 }
 

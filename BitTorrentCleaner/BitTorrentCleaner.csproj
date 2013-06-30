@@ -39,6 +39,9 @@
     <Reference Include="ExtensionMethods">
       <HintPath>..\..\ExtensionMethods\ExtensionMethods\bin\Release\ExtensionMethods.dll</HintPath>
     </Reference>
+    <Reference Include="IniFile">
+      <HintPath>..\..\IniFile\IniFile\bin\Release\IniFile.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
