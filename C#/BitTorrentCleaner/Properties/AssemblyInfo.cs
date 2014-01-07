@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle( "BitTorrentCleaner" )]
 [assembly: AssemblyDescription( "" )]
 [assembly: AssemblyConfiguration( "" )]
-[assembly: AssemblyCompany( "dredei, http://softez.pp.ua/" )]
+[assembly: AssemblyCompany( "dredei, http://www.softez.pp.ua/" )]
 [assembly: AssemblyProduct( "BitTorrentCleaner" )]
-[assembly: AssemblyCopyright( "dredei, http://softez.pp.ua/ © 2013" )]
+[assembly: AssemblyCopyright( "dredei, http://www.softez.pp.ua/ © 2014" )]
 [assembly: AssemblyTrademark( "" )]
 [assembly: AssemblyCulture( "" )]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // Можно задать все значения или принять номер построения и номер редакции по умолчанию, 
 // используя "*", как показано ниже:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion( "1.0.1.0" )]
-[assembly: AssemblyFileVersion( "1.0.1.0" )]
+[assembly: AssemblyVersion( "1.0.2.0" )]
+[assembly: AssemblyFileVersion( "1.0.2.0" )]

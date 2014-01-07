@@ -2,9 +2,9 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "BitTorrent Cleaner"
-#define MyAppVersion "1.0.1"
-#define MyAppPublisher "dredei, http://softez.pp.ua/"
-#define MyAppURL "http://softez.pp.ua/"
+#define MyAppVersion "1.0.2"
+#define MyAppPublisher "dredei, http://www.softez.pp.ua/"
+#define MyAppURL "http://www.softez.pp.ua/"
 #define MyAppExeName "BitTorrentCleaner.exe"
 
 [Setup]
@@ -25,8 +25,9 @@ AllowNoIcons=yes
 LicenseFile=D:\Progs\license_freeware.txt
 OutputDir=bin\
 OutputBaseFilename=bittorrent_cleaner_setup
-Compression=lzma
+Compression=lzma2/ultra64
 SolidCompression=yes
+InternalCompressLevel=ultra
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -50,10 +51,10 @@ Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\{#MyAppName}"; Fil
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
-Filename: "http://softez.pp.ua/"; Flags: shellexec
+Filename: "http://www.softez.pp.ua/"; Flags: shellexec
 
 [Messages]
-BeveledLabel=dredei (ICQ: 1324484), http://softez.pp.ua/
+BeveledLabel=dredei, http://www.softez.pp.ua/
 
 [Code]
 function IsDotNetDetected(version: string; service: cardinal): boolean;
