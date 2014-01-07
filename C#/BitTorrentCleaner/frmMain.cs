@@ -118,17 +118,11 @@ namespace BitTorrentCleaner
                 MessageBox.Show( strings.WrongPath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error );
                 return;
             }
-            Process[] btp = Process.GetProcessesByName( "BitTorrent" );
-            if ( btp.Length > 0 )
+            FrmWaiting frm = new FrmWaiting();
+            var dRes = frm.ShowDialog();
+            if ( dRes == DialogResult.Cancel )
             {
-                MessageBox.Show( strings.CloseBT, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning );
-                btp[ 0 ].WaitForExit();
-            }
-            Process[] up = Process.GetProcessesByName( "uTorrent" );
-            if ( up.Length > 0 )
-            {
-                MessageBox.Show( strings.CloseBT, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning );
-                up[ 0 ].WaitForExit();
+                return;
             }
             this.btnStart.Enabled = false;
             this._thr = new Thread( this.Work );
