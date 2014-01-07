@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿#region Using
+
+using System;
 using System.Diagnostics;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
+
+#endregion
 
 namespace BitTorrentCleaner
 {
@@ -16,7 +15,7 @@ namespace BitTorrentCleaner
 
         public FrmWaiting()
         {
-            InitializeComponent();
+            this.InitializeComponent();
             this.DialogResult = DialogResult.Cancel;
         }
 
@@ -27,7 +26,7 @@ namespace BitTorrentCleaner
             {
                 return;
             }
-            tmrCheck.Stop();
+            this.tmrCheck.Stop();
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
