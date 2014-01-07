@@ -7,4 +7,4 @@ Cleans up unnecessary .torrent files in BitTorrent (uTorrent) folder.
 
 Using MonoTorrent.BEncoding: https://github.com/mono/monotorrent
 
-Site: http://softez.pp.ua/
+Site: http://www.softez.pp.ua/
