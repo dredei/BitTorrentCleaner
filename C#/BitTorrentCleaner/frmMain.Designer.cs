@@ -55,8 +55,8 @@
             // 
             // btnSelectPath
             // 
-            this.btnSelectPath.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.btnSelectPath, "btnSelectPath");
+            this.btnSelectPath.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSelectPath.Name = "btnSelectPath";
             this.btnSelectPath.UseVisualStyleBackColor = true;
             this.btnSelectPath.Click += new System.EventHandler(this.btnSelectPath_Click);
@@ -74,8 +74,8 @@
             // 
             // btnStart
             // 
-            this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.btnStart, "btnStart");
+            this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStart.Name = "btnStart";
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
@@ -117,6 +117,10 @@
             this.lblSite.Name = "lblSite";
             this.lblSite.Click += new System.EventHandler(this.lblSite_Click);
             // 
+            // fbd1
+            // 
+            resources.ApplyResources(this.fbd1, "fbd1");
+            // 
             // cbRecycle
             // 
             resources.ApplyResources(this.cbRecycle, "cbRecycle");
@@ -138,8 +142,8 @@
             // 
             // btnSelResumePath
             // 
-            this.btnSelResumePath.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.btnSelResumePath, "btnSelResumePath");
+            this.btnSelResumePath.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSelResumePath.Name = "btnSelResumePath";
             this.btnSelResumePath.UseVisualStyleBackColor = true;
             this.btnSelResumePath.Click += new System.EventHandler(this.btnSelResumePath_Click);
@@ -151,8 +155,8 @@
             // 
             // btnAnalys
             // 
-            this.btnAnalys.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.btnAnalys, "btnAnalys");
+            this.btnAnalys.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAnalys.Name = "btnAnalys";
             this.btnAnalys.UseVisualStyleBackColor = true;
             this.btnAnalys.Click += new System.EventHandler(this.btnAnalys_Click);

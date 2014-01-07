@@ -117,194 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblPathToTorrents.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;tbTorrentsPath.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblPathToTorrents.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 39</value>
-  </data>
-  <data name="lblPathToTorrents.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 13</value>
-  </data>
-  <data name="lblPathToTorrents.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblPathToTorrents.Text" xml:space="preserve">
-    <value>Путь к папке с торрент-файлами:</value>
+  <data name="&gt;&gt;lblPathToResume.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblPathToTorrents.Name" xml:space="preserve">
     <value>lblPathToTorrents</value>
   </data>
-  <data name="&gt;&gt;lblPathToTorrents.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblPathToTorrents.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblPathToResume.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lblPathToTorrents.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="btnSelectPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 53</value>
-  </data>
-  <data name="btnSelectPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 23</value>
-  </data>
-  <data name="btnSelectPath.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="btnSelectPath.Text" xml:space="preserve">
-    <value>...</value>
-  </data>
-  <data name="&gt;&gt;btnSelectPath.Name" xml:space="preserve">
-    <value>btnSelectPath</value>
-  </data>
-  <data name="&gt;&gt;btnSelectPath.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSelectPath.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblSite.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnSelectPath.ZOrder" xml:space="preserve">
-    <value>13</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
   </data>
-  <data name="tbTorrentsPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 55</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblDeleted.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
   </data>
-  <data name="tbTorrentsPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 20</value>
-  </data>
-  <data name="tbTorrentsPath.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tbTorrentsPath.Text" xml:space="preserve">
-    <value>c:\Users\Home\AppData\Roaming\BitTorrent\</value>
-  </data>
-  <data name="&gt;&gt;tbTorrentsPath.Name" xml:space="preserve">
-    <value>tbTorrentsPath</value>
+  <data name="btnAnalys.Size" type="System.Drawing.Size, System.Drawing">
+    <value>302, 23</value>
   </data>
   <data name="&gt;&gt;tbTorrentsPath.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tbTorrentsPath.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnAnalys.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;tbTorrentsPath.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="pbAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 81</value>
-  </data>
-  <data name="pbAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>302, 15</value>
-  </data>
-  <data name="pbAll.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;pbAll.Name" xml:space="preserve">
-    <value>pbAll</value>
-  </data>
-  <data name="&gt;&gt;pbAll.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbAll.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pbAll.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="btnStart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 187</value>
-  </data>
-  <data name="btnStart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>302, 23</value>
-  </data>
-  <data name="btnStart.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="btnStart.Text" xml:space="preserve">
-    <value>Старт</value>
-  </data>
-  <data name="&gt;&gt;btnStart.Name" xml:space="preserve">
-    <value>btnStart</value>
-  </data>
-  <data name="&gt;&gt;btnStart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnStart.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnStart.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="lblDeleted.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblDeleted.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 99</value>
-  </data>
-  <data name="lblDeleted.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 13</value>
-  </data>
-  <data name="lblDeleted.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="lblDeleted.Text" xml:space="preserve">
-    <value>Удалено:</value>
-  </data>
-  <data name="&gt;&gt;lblDeleted.Name" xml:space="preserve">
-    <value>lblDeleted</value>
-  </data>
-  <data name="&gt;&gt;lblDeleted.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDeleted.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblDeleted.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="tbLog.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 115</value>
-  </data>
-  <data name="tbLog.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tbLog.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="tbLog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>302, 66</value>
-  </data>
-  <data name="tbLog.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;tbLog.Name" xml:space="preserve">
-    <value>tbLog</value>
-  </data>
-  <data name="&gt;&gt;tbLog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbLog.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tbLog.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="rbRus.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbRus.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 245</value>
-  </data>
-  <data name="rbRus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 17</value>
-  </data>
-  <data name="rbRus.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="rbEng.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 245</value>
   </data>
   <data name="rbRus.Text" xml:space="preserve">
     <value>Русский</value>
@@ -312,221 +158,300 @@
   <data name="&gt;&gt;rbRus.Name" xml:space="preserve">
     <value>rbRus</value>
   </data>
-  <data name="&gt;&gt;rbRus.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="rbRus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 17</value>
   </data>
-  <data name="&gt;&gt;rbRus.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="lblDeleted.Text" xml:space="preserve">
+    <value>Удалено:</value>
   </data>
-  <data name="&gt;&gt;rbRus.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblDeleted.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
-  <data name="rbEng.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbEng.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 245</value>
+  <data name="&gt;&gt;btnAnalys.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="rbEng.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 17</value>
   </data>
-  <data name="rbEng.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>307, 265</value>
   </data>
-  <data name="rbEng.Text" xml:space="preserve">
-    <value>English</value>
-  </data>
-  <data name="&gt;&gt;rbEng.Name" xml:space="preserve">
-    <value>rbEng</value>
-  </data>
-  <data name="&gt;&gt;rbEng.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rbEng.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;rbEng.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="lblSite.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblSite.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold, Underline</value>
-  </data>
-  <data name="lblSite.Location" type="System.Drawing.Point, System.Drawing">
-    <value>276, 247</value>
-  </data>
-  <data name="lblSite.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 13</value>
-  </data>
-  <data name="lblSite.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="&gt;&gt;btnAnalys.Name" xml:space="preserve">
+    <value>btnAnalys</value>
   </data>
   <data name="lblSite.Text" xml:space="preserve">
     <value>Site</value>
   </data>
-  <data name="&gt;&gt;lblSite.Name" xml:space="preserve">
-    <value>lblSite</value>
-  </data>
-  <data name="&gt;&gt;lblSite.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSite.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblSite.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <metadata name="fbd1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="cbRecycle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="cbRecycle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 246</value>
-  </data>
-  <data name="cbRecycle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 17</value>
-  </data>
-  <data name="cbRecycle.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="cbRecycle.Text" xml:space="preserve">
-    <value>Удалять в корзину</value>
+  <data name="btnStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 187</value>
   </data>
   <data name="&gt;&gt;cbRecycle.Name" xml:space="preserve">
     <value>cbRecycle</value>
   </data>
-  <data name="&gt;&gt;cbRecycle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>BitTorrent Cleaner v1.0.2</value>
   </data>
-  <data name="&gt;&gt;cbRecycle.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblPathToTorrents.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;cbRecycle.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="lblPathToResume.AutoSize" type="System.Boolean, mscorlib">
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lblPathToResume.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;btnStart.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;lblDeleted.Name" xml:space="preserve">
+    <value>lblDeleted</value>
+  </data>
+  <data name="&gt;&gt;rbRus.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;lblPathToTorrents.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblPathToResume.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 13</value>
   </data>
-  <data name="lblPathToResume.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="lblPathToResume.Text" xml:space="preserve">
-    <value>Путь к resume.dat:</value>
+  <data name="&gt;&gt;lblDeleted.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblPathToResume.Name" xml:space="preserve">
     <value>lblPathToResume</value>
   </data>
-  <data name="&gt;&gt;lblPathToResume.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="pbAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 81</value>
   </data>
-  <data name="&gt;&gt;lblPathToResume.Parent" xml:space="preserve">
+  <data name="rbRus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 245</value>
+  </data>
+  <data name="tbResumePath.Text" xml:space="preserve">
+    <value>c:\Users\Home\AppData\Roaming\BitTorrent\resume.dat</value>
+  </data>
+  <data name="tbLog.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pbAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>302, 15</value>
+  </data>
+  <data name="rbRus.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="rbEng.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="btnSelResumePath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 23</value>
+  </data>
+  <data name="btnAnalys.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 216</value>
+  </data>
+  <data name="&gt;&gt;tbLog.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblDeleted.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="tbLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>302, 66</value>
+  </data>
+  <data name="&gt;&gt;btnSelResumePath.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnStart.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblPathToTorrents.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tbLog.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="lblPathToResume.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btnSelectPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 53</value>
+  </data>
+  <data name="&gt;&gt;pbAll.Name" xml:space="preserve">
+    <value>pbAll</value>
+  </data>
+  <data name="lblPathToResume.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;tbResumePath.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbLog.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lblPathToResume.Text" xml:space="preserve">
+    <value>Путь к resume.dat:</value>
+  </data>
+  <data name="lblSite.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;btnSelResumePath.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblSite.Name" xml:space="preserve">
+    <value>lblSite</value>
+  </data>
+  <data name="tbResumePath.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;fbd1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblSite.Location" type="System.Drawing.Point, System.Drawing">
+    <value>276, 247</value>
+  </data>
+  <data name="btnStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>302, 23</value>
+  </data>
+  <data name="lblPathToTorrents.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblPathToTorrents.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="tbTorrentsPath.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tbResumePath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="&gt;&gt;btnSelResumePath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblDeleted.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;cbRecycle.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="pbAll.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblDeleted.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 99</value>
+  </data>
+  <data name="&gt;&gt;tbResumePath.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;rbRus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnStart.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tbResumePath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 20</value>
+  </data>
+  <data name="lblPathToTorrents.Text" xml:space="preserve">
+    <value>Путь к папке с торрент-файлами:</value>
+  </data>
+  <data name="&gt;&gt;tbTorrentsPath.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;tbTorrentsPath.Name" xml:space="preserve">
+    <value>tbTorrentsPath</value>
+  </data>
+  <data name="&gt;&gt;rbEng.Name" xml:space="preserve">
+    <value>rbEng</value>
+  </data>
+  <data name="&gt;&gt;rbEng.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;rbEng.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbRecycle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnSelectPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 23</value>
+  </data>
+  <data name="&gt;&gt;btnAnalys.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ofdResume.Name" xml:space="preserve">
+    <value>ofdResume</value>
+  </data>
+  <data name="&gt;&gt;tbResumePath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbRus.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblPathToResume.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="tbResumePath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 16</value>
+  <data name="lblPathToTorrents.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 13</value>
   </data>
-  <data name="tbResumePath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 20</value>
-  </data>
-  <data name="tbResumePath.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="tbResumePath.Text" xml:space="preserve">
-    <value>c:\Users\Home\AppData\Roaming\BitTorrent\resume.dat</value>
-  </data>
-  <data name="&gt;&gt;tbResumePath.Name" xml:space="preserve">
-    <value>tbResumePath</value>
-  </data>
-  <data name="&gt;&gt;tbResumePath.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbResumePath.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tbResumePath.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="btnSelResumePath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 14</value>
-  </data>
-  <data name="btnSelResumePath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 23</value>
-  </data>
-  <data name="btnSelResumePath.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="btnSelResumePath.Text" xml:space="preserve">
-    <value>...</value>
-  </data>
-  <data name="&gt;&gt;btnSelResumePath.Name" xml:space="preserve">
-    <value>btnSelResumePath</value>
-  </data>
-  <data name="&gt;&gt;btnSelResumePath.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSelResumePath.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnSelResumePath.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="ofdResume.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>93, 17</value>
-  </metadata>
-  <data name="ofdResume.Filter" xml:space="preserve">
-    <value>resume.dat|resume.dat</value>
-  </data>
-  <data name="btnAnalys.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 216</value>
-  </data>
-  <data name="btnAnalys.Size" type="System.Drawing.Size, System.Drawing">
-    <value>302, 23</value>
-  </data>
-  <data name="btnAnalys.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+  <data name="rbRus.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="btnAnalys.Text" xml:space="preserve">
     <value>Анализ</value>
   </data>
-  <data name="&gt;&gt;btnAnalys.Name" xml:space="preserve">
-    <value>btnAnalys</value>
+  <data name="tbTorrentsPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 20</value>
   </data>
-  <data name="&gt;&gt;btnAnalys.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;pbAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnAnalys.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="lblPathToTorrents.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 39</value>
   </data>
-  <data name="&gt;&gt;btnAnalys.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;cbRecycle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FrmMain</value>
   </data>
-  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="btnSelResumePath.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
-  <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
+  <data name="&gt;&gt;pbAll.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>307, 265</value>
+  <data name="&gt;&gt;btnSelResumePath.Name" xml:space="preserve">
+    <value>btnSelResumePath</value>
+  </data>
+  <data name="btnSelResumePath.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;lblSite.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbRecycle.Text" xml:space="preserve">
+    <value>Удалять в корзину</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbLog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 115</value>
+  </data>
+  <data name="lblSite.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold, Underline</value>
+  </data>
+  <data name="tbTorrentsPath.Text" xml:space="preserve">
+    <value>c:\Users\Home\AppData\Roaming\BitTorrent\</value>
+  </data>
+  <data name="btnAnalys.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1660,28 +1585,103 @@
         //////////////////////////////////8=
 </value>
   </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
+  <data name="tbLog.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>BitTorrent Cleaner v1.0.2</value>
+  <data name="&gt;&gt;rbEng.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSelectPath.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;tbResumePath.Name" xml:space="preserve">
+    <value>tbResumePath</value>
+  </data>
+  <data name="btnSelectPath.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="cbRecycle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 246</value>
+  </data>
+  <data name="cbRecycle.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;pbAll.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;fbd1.Name" xml:space="preserve">
     <value>fbd1</value>
   </data>
-  <data name="&gt;&gt;fbd1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;tbLog.Name" xml:space="preserve">
+    <value>tbLog</value>
   </data>
-  <data name="&gt;&gt;ofdResume.Name" xml:space="preserve">
-    <value>ofdResume</value>
+  <data name="&gt;&gt;cbRecycle.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnStart.Name" xml:space="preserve">
+    <value>btnStart</value>
+  </data>
+  <data name="&gt;&gt;tbLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblSite.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbRecycle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 17</value>
   </data>
   <data name="&gt;&gt;ofdResume.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FrmMain</value>
+  <data name="btnSelResumePath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 14</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="rbEng.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
+  <data name="rbEng.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;btnSelectPath.Name" xml:space="preserve">
+    <value>btnSelectPath</value>
+  </data>
+  <data name="&gt;&gt;lblDeleted.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lblSite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 13</value>
+  </data>
+  <data name="&gt;&gt;btnSelectPath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnStart.Text" xml:space="preserve">
+    <value>Старт</value>
+  </data>
+  <data name="tbTorrentsPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 55</value>
+  </data>
+  <data name="lblPathToResume.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ofdResume.Filter" xml:space="preserve">
+    <value>resume.dat|resume.dat</value>
+  </data>
+  <data name="btnSelectPath.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblSite.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;btnSelectPath.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <metadata name="ofdResume.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>93, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="fbd1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

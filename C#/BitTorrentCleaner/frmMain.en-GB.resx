@@ -145,6 +145,9 @@
   <data name="lblPathToResume.Text" xml:space="preserve">
     <value>Path to the resume.dat:</value>
   </data>
+  <data name="btnAnalys.Text" xml:space="preserve">
+    <value>Analys</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAgIAAAAEAIAAoCAEAFgAAACgAAACAAAAAAAEAAAEAIAAAAAAAAAABABMLAAATCwAAAAAAAAAA
