@@ -61,7 +61,7 @@ namespace BitTorrentCleaner {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Возможно удалить: {0} файлов ({1}).
+        ///   Ищет локализованную строку, похожую на Возможно удалить: {0} файлов ({1})..
         /// </summary>
         internal static string AnalysDone {
             get {

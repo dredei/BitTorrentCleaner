@@ -117,34 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AnalysDone" xml:space="preserve">
-    <value>Possible to delete: {0} files ({1}).</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 13</value>
   </data>
-  <data name="CloseBT" xml:space="preserve">
-    <value>Close BitTorrent/uTorrent and press "OK"!</value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Expect closing BitTorrent/uTorrent...</value>
   </data>
-  <data name="Deleted" xml:space="preserve">
-    <value>Deleted: {0} ({1} files)</value>
-  </data>
-  <data name="DeletingFile" xml:space="preserve">
-    <value>Delete the file "{0}"...</value>
-  </data>
-  <data name="Done" xml:space="preserve">
-    <value>Done.</value>
-  </data>
-  <data name="Error" xml:space="preserve">
-    <value>Error</value>
-  </data>
-  <data name="Information" xml:space="preserve">
-    <value>Information</value>
-  </data>
-  <data name="RestartApp" xml:space="preserve">
-    <value>The application will be restarted! Continue?</value>
-  </data>
-  <data name="Warning" xml:space="preserve">
-    <value>Warning</value>
-  </data>
-  <data name="WrongPath" xml:space="preserve">
-    <value>Incorrect path!</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Expect closing...</value>
   </data>
 </root>

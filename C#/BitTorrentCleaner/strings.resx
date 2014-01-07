@@ -139,7 +139,7 @@
     <value>Неверно указан путь!</value>
   </data>
   <data name="AnalysDone" xml:space="preserve">
-    <value>Возможно удалить: {0} файлов ({1})</value>
+    <value>Возможно удалить: {0} файлов ({1}).</value>
   </data>
   <data name="Information" xml:space="preserve">
     <value>Информация</value>

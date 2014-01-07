@@ -2,7 +2,9 @@
 
 using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 
 #endregion
@@ -13,8 +15,9 @@ namespace BitTorrentCleaner
     {
         private readonly string[] _proccess = { "BitTorrent", "uTorrent" };
 
-        public FrmWaiting()
+        public FrmWaiting( FrmMain frmMain )
         {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo( frmMain.Locale );
             this.InitializeComponent();
             this.DialogResult = DialogResult.Cancel;
         }

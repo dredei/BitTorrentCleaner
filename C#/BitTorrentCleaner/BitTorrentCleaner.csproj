@@ -102,6 +102,9 @@
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmWaiting.en-GB.resx">
+      <DependentUpon>FrmWaiting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmWaiting.resx">
       <DependentUpon>FrmWaiting.cs</DependentUpon>
     </EmbeddedResource>

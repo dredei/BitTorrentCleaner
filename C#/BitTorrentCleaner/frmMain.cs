@@ -15,14 +15,15 @@ namespace BitTorrentCleaner
 {
     public partial class FrmMain : Form
     {
+        public string Locale = "ru-RU";
+
         private Thread _thr;
-        private string _locale = "ru-RU";
         private bool _loading = true;
 
         public FrmMain()
         {
             this.LoadLang();
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo( this._locale );
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo( this.Locale );
             this.InitializeComponent();
         }
 
@@ -41,7 +42,7 @@ namespace BitTorrentCleaner
         private void LoadLang()
         {
             IniFile ini = new IniFile( Application.StartupPath + @"\Settings.ini" );
-            this._locale = ini.Read( "Lang", "Options", this._locale );
+            this.Locale = ini.Read( "Lang", "Options", this.Locale );
         }
 
         private void SaveSettings()
@@ -50,7 +51,7 @@ namespace BitTorrentCleaner
             ini.Write( "TorrentsPath", this.tbTorrentsPath.Text, "Options" );
             ini.Write( "ResumePath", this.tbResumePath.Text, "Options" );
             ini.Write( "RemoveToRec", this.cbRecycle.Checked.ToString(), "Options" );
-            ini.Write( "Lang", this._locale, "Options" );
+            ini.Write( "Lang", this.Locale, "Options" );
         }
 
         private void LoadSettings()
@@ -60,7 +61,7 @@ namespace BitTorrentCleaner
             this.tbResumePath.Text = ini.Read( "ResumePath", "Options", this.tbResumePath.Text );
             this.cbRecycle.Checked = bool.Parse( ini.Read( "RemoveToRec", "Options", this.cbRecycle.Checked.ToString() ) );
 
-            switch ( this._locale )
+            switch ( this.Locale )
             {
                 case "ru-RU":
                     rbRus.Checked = true;
@@ -77,7 +78,7 @@ namespace BitTorrentCleaner
         private void SetLocale( string locale = "ru-RU" )
         {
             Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo( locale );
-            this._locale = locale;
+            this.Locale = locale;
             DialogResult res = MessageBox.Show( strings.RestartApp, strings.Warning, MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning );
             if ( res == DialogResult.Yes )
@@ -88,7 +89,7 @@ namespace BitTorrentCleaner
 
         private void WorkDelete()
         {
-            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo( this._locale );
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo( this.Locale );
             Cleaner cln = new Cleaner( this.tbTorrentsPath.Text, this.tbResumePath.Text );
             cln.UpdEvent += this.UpdProgress;
             cln.Clean( this.cbRecycle.Checked );
@@ -99,7 +100,7 @@ namespace BitTorrentCleaner
 
         private void WorkAnalys()
         {
-            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo( this._locale );
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo( this.Locale );
             Cleaner cln = new Cleaner( this.tbTorrentsPath.Text, this.tbResumePath.Text );
             cln.UpdEvent += this.UpdProgress;
             int deletedCount;
@@ -131,7 +132,7 @@ namespace BitTorrentCleaner
                 MessageBox.Show( strings.WrongPath, strings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error );
                 return;
             }
-            FrmWaiting frm = new FrmWaiting();
+            FrmWaiting frm = new FrmWaiting( this );
             var dRes = frm.ShowDialog();
             if ( dRes == DialogResult.Cancel )
             {
@@ -151,7 +152,7 @@ namespace BitTorrentCleaner
                 MessageBox.Show( strings.WrongPath, strings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error );
                 return;
             }
-            FrmWaiting frm = new FrmWaiting();
+            FrmWaiting frm = new FrmWaiting( this );
             var dRes = frm.ShowDialog();
             if ( dRes == DialogResult.Cancel )
             {
