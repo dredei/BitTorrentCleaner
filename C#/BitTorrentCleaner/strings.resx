@@ -129,17 +129,11 @@
   <data name="Done" xml:space="preserve">
     <value>Завершено.</value>
   </data>
-  <data name="PathToResumeDat" xml:space="preserve">
-    <value>Путь к файлу resume.dat:</value>
+  <data name="restartApp" xml:space="preserve">
+    <value>Приложение будет перезапущено! Продолжить?</value>
   </data>
-  <data name="PathToTorrents" xml:space="preserve">
-    <value>Путь к папке с торрент-файлами:</value>
-  </data>
-  <data name="RemoveRecycle" xml:space="preserve">
-    <value>Удалять в корзину</value>
-  </data>
-  <data name="Start" xml:space="preserve">
-    <value>Старт</value>
+  <data name="warning" xml:space="preserve">
+    <value>Предупреждение</value>
   </data>
   <data name="WrongPath" xml:space="preserve">
     <value>Неверно указан путь!</value>

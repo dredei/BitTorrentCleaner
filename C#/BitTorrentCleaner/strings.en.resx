@@ -129,17 +129,11 @@
   <data name="Done" xml:space="preserve">
     <value>Done.</value>
   </data>
-  <data name="PathToResumeDat" xml:space="preserve">
-    <value>Path to the resume.dat:</value>
+  <data name="restartApp" xml:space="preserve">
+    <value>The application will be restarted! Continue?</value>
   </data>
-  <data name="PathToTorrents" xml:space="preserve">
-    <value>Path to the folder with torrents files:</value>
-  </data>
-  <data name="RemoveRecycle" xml:space="preserve">
-    <value>Remove to recycle bin</value>
-  </data>
-  <data name="Start" xml:space="preserve">
-    <value>Start</value>
+  <data name="warning" xml:space="preserve">
+    <value>Warning</value>
   </data>
   <data name="WrongPath" xml:space="preserve">
     <value>Incorrect path!</value>

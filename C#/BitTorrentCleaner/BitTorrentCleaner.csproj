@@ -37,10 +37,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ExtensionMethods">
-      <HintPath>..\..\ExtensionMethods\ExtensionMethods\bin\Release\ExtensionMethods.dll</HintPath>
+      <HintPath>..\..\..\ExtensionMethods\ExtensionMethods\bin\Release\ExtensionMethods.dll</HintPath>
     </Reference>
     <Reference Include="IniFile">
-      <HintPath>..\..\IniFile\IniFile\bin\Release\IniFile.dll</HintPath>
+      <HintPath>..\..\..\IniFile\IniFile\bin\Release\IniFile.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -90,6 +90,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>strings.en.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmMain.en-GB.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
