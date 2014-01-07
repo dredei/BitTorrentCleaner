@@ -69,5 +69,33 @@ namespace BitTorrentCleaner
                 this.UpdEvent( this, args );
             }
         }
+
+        public void Analys( out int deletedCount, out long cleanSize )
+        {
+            this._cleanSize = 0;
+            UpdEventArgs args = new UpdEventArgs();
+            BEncodedDictionary resume = BEncodedValue.Decode<BEncodedDictionary>( File.ReadAllBytes( this._resumePath ) );
+            string[] torrentFilesList = Directory.GetFiles( this._torrentsPath, @"*.torrent",
+                System.IO.SearchOption.TopDirectoryOnly );
+            args.MaxProgress = torrentFilesList.Length;
+            args.Progress = 0;
+            args.DeletedCount = 0;
+            this.UpdEvent( this, args );
+            foreach ( string file in torrentFilesList )
+            {
+                string fileName = Path.GetFileName( file );
+                if ( !resume.ContainsKey( new BEncodedString( fileName ) ) )
+                {
+                    this._cleanSize += GetFileSize( file );
+                    args.Msg = strings.DeletingFile.f( fileName );
+                    args.CleanSize = this._cleanSize;
+                    args.DeletedCount++;
+                }
+                args.Progress++;
+                this.UpdEvent( this, args );
+            }
+            deletedCount = args.DeletedCount;
+            cleanSize = args.CleanSize;
+        }
     }
 }

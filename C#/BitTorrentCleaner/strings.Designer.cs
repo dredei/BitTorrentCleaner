@@ -61,6 +61,15 @@ namespace BitTorrentCleaner {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Возможно удалить: {0} файлов ({1}).
+        /// </summary>
+        internal static string AnalysDone {
+            get {
+                return ResourceManager.GetString("AnalysDone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Закройте BitTorrent/uTorrent и нажмите &quot;OK&quot;!.
         /// </summary>
         internal static string CloseBT {
@@ -97,20 +106,38 @@ namespace BitTorrentCleaner {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Ошибка.
+        /// </summary>
+        internal static string Error {
+            get {
+                return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Информация.
+        /// </summary>
+        internal static string Information {
+            get {
+                return ResourceManager.GetString("Information", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Приложение будет перезапущено! Продолжить?.
         /// </summary>
-        internal static string restartApp {
+        internal static string RestartApp {
             get {
-                return ResourceManager.GetString("restartApp", resourceCulture);
+                return ResourceManager.GetString("RestartApp", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на Предупреждение.
         /// </summary>
-        internal static string warning {
+        internal static string Warning {
             get {
-                return ResourceManager.GetString("warning", resourceCulture);
+                return ResourceManager.GetString("Warning", resourceCulture);
             }
         }
         

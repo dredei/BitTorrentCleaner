@@ -45,6 +45,7 @@
             this.tbResumePath = new System.Windows.Forms.TextBox();
             this.btnSelResumePath = new System.Windows.Forms.Button();
             this.ofdResume = new System.Windows.Forms.OpenFileDialog();
+            this.btnAnalys = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblPathToTorrents
@@ -54,8 +55,8 @@
             // 
             // btnSelectPath
             // 
-            resources.ApplyResources(this.btnSelectPath, "btnSelectPath");
             this.btnSelectPath.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnSelectPath, "btnSelectPath");
             this.btnSelectPath.Name = "btnSelectPath";
             this.btnSelectPath.UseVisualStyleBackColor = true;
             this.btnSelectPath.Click += new System.EventHandler(this.btnSelectPath_Click);
@@ -73,8 +74,8 @@
             // 
             // btnStart
             // 
-            resources.ApplyResources(this.btnStart, "btnStart");
             this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnStart, "btnStart");
             this.btnStart.Name = "btnStart";
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
@@ -116,10 +117,6 @@
             this.lblSite.Name = "lblSite";
             this.lblSite.Click += new System.EventHandler(this.lblSite_Click);
             // 
-            // fbd1
-            // 
-            resources.ApplyResources(this.fbd1, "fbd1");
-            // 
             // cbRecycle
             // 
             resources.ApplyResources(this.cbRecycle, "cbRecycle");
@@ -141,8 +138,8 @@
             // 
             // btnSelResumePath
             // 
-            resources.ApplyResources(this.btnSelResumePath, "btnSelResumePath");
             this.btnSelResumePath.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnSelResumePath, "btnSelResumePath");
             this.btnSelResumePath.Name = "btnSelResumePath";
             this.btnSelResumePath.UseVisualStyleBackColor = true;
             this.btnSelResumePath.Click += new System.EventHandler(this.btnSelResumePath_Click);
@@ -152,10 +149,19 @@
             this.ofdResume.FileName = "resume.dat";
             resources.ApplyResources(this.ofdResume, "ofdResume");
             // 
+            // btnAnalys
+            // 
+            this.btnAnalys.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnAnalys, "btnAnalys");
+            this.btnAnalys.Name = "btnAnalys";
+            this.btnAnalys.UseVisualStyleBackColor = true;
+            this.btnAnalys.Click += new System.EventHandler(this.btnAnalys_Click);
+            // 
             // FrmMain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnAnalys);
             this.Controls.Add(this.btnSelResumePath);
             this.Controls.Add(this.tbResumePath);
             this.Controls.Add(this.lblPathToResume);
@@ -198,6 +204,7 @@
         private System.Windows.Forms.TextBox tbResumePath;
         private System.Windows.Forms.Button btnSelResumePath;
         private System.Windows.Forms.OpenFileDialog ofdResume;
+        private System.Windows.Forms.Button btnAnalys;
     }
 }
 

@@ -78,7 +78,7 @@ namespace BitTorrentCleaner
         {
             Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo( locale );
             this._locale = locale;
-            DialogResult res = MessageBox.Show( strings.restartApp, strings.warning, MessageBoxButtons.YesNo,
+            DialogResult res = MessageBox.Show( strings.RestartApp, strings.Warning, MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning );
             if ( res == DialogResult.Yes )
             {
@@ -86,15 +86,29 @@ namespace BitTorrentCleaner
             }
         }
 
-        private void Work()
+        private void WorkDelete()
         {
-            this.SetLocale( this._locale );
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo( this._locale );
             Cleaner cln = new Cleaner( this.tbTorrentsPath.Text, this.tbResumePath.Text );
             cln.UpdEvent += this.UpdProgress;
             cln.Clean( this.cbRecycle.Checked );
-            MessageBox.Show( strings.Done, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information );
+            MessageBox.Show( strings.Done, strings.Information, MessageBoxButtons.OK, MessageBoxIcon.Information );
             this.btnStart.Enabled = true;
             this.tbLog.AppendText( strings.Done );
+        }
+
+        private void WorkAnalys()
+        {
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo( this._locale );
+            Cleaner cln = new Cleaner( this.tbTorrentsPath.Text, this.tbResumePath.Text );
+            cln.UpdEvent += this.UpdProgress;
+            int deletedCount;
+            long cleanSize;
+            cln.Analys( out deletedCount, out cleanSize );
+            string infoString = strings.AnalysDone.f( deletedCount, ExMethods.getSizeReadable( cleanSize ) );
+            MessageBox.Show( infoString, strings.Information, MessageBoxButtons.OK, MessageBoxIcon.Information );
+            this.btnStart.Enabled = true;
+            this.tbLog.AppendText( infoString );
         }
 
         private void UpdProgress( object sender, UpdEventArgs e )
@@ -110,12 +124,11 @@ namespace BitTorrentCleaner
 
         private void btnStart_Click( object sender, EventArgs e )
         {
-            this.SetLocale( this._locale );
             this.tbLog.Clear();
             if ( !File.Exists( this.tbResumePath.Text ) )
             {
                 this.tbLog.AppendText( strings.WrongPath );
-                MessageBox.Show( strings.WrongPath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error );
+                MessageBox.Show( strings.WrongPath, strings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error );
                 return;
             }
             FrmWaiting frm = new FrmWaiting();
@@ -125,7 +138,27 @@ namespace BitTorrentCleaner
                 return;
             }
             this.btnStart.Enabled = false;
-            this._thr = new Thread( this.Work );
+            this._thr = new Thread( this.WorkDelete );
+            this._thr.Start();
+        }
+
+        private void btnAnalys_Click( object sender, EventArgs e )
+        {
+            this.tbLog.Clear();
+            if ( !File.Exists( this.tbResumePath.Text ) )
+            {
+                this.tbLog.AppendText( strings.WrongPath );
+                MessageBox.Show( strings.WrongPath, strings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error );
+                return;
+            }
+            FrmWaiting frm = new FrmWaiting();
+            var dRes = frm.ShowDialog();
+            if ( dRes == DialogResult.Cancel )
+            {
+                return;
+            }
+            this.btnStart.Enabled = false;
+            this._thr = new Thread( this.WorkAnalys );
             this._thr.Start();
         }
 

@@ -129,13 +129,22 @@
   <data name="Done" xml:space="preserve">
     <value>Завершено.</value>
   </data>
-  <data name="restartApp" xml:space="preserve">
+  <data name="RestartApp" xml:space="preserve">
     <value>Приложение будет перезапущено! Продолжить?</value>
   </data>
-  <data name="warning" xml:space="preserve">
+  <data name="Warning" xml:space="preserve">
     <value>Предупреждение</value>
   </data>
   <data name="WrongPath" xml:space="preserve">
     <value>Неверно указан путь!</value>
+  </data>
+  <data name="AnalysDone" xml:space="preserve">
+    <value>Возможно удалить: {0} файлов ({1})</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Информация</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Ошибка</value>
   </data>
 </root>

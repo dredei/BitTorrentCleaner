@@ -53,6 +53,7 @@
             // 
             // tmrCheck
             // 
+            this.tmrCheck.Enabled = true;
             this.tmrCheck.Interval = 500;
             this.tmrCheck.Tick += new System.EventHandler(this.tmrCheck_Tick);
             // 
