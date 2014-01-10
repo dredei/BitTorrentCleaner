@@ -95,6 +95,7 @@ namespace BitTorrentCleaner
             cln.Clean( this.cbRecycle.Checked );
             MessageBox.Show( strings.Done, strings.Information, MessageBoxButtons.OK, MessageBoxIcon.Information );
             this.btnStart.Enabled = true;
+            this.btnAnalys.Enabled = true;
             this.tbLog.AppendText( strings.Done );
         }
 
@@ -109,6 +110,7 @@ namespace BitTorrentCleaner
             string infoString = strings.AnalysDone.f( deletedCount, ExMethods.getSizeReadable( cleanSize ) );
             MessageBox.Show( infoString, strings.Information, MessageBoxButtons.OK, MessageBoxIcon.Information );
             this.btnStart.Enabled = true;
+            this.btnAnalys.Enabled = true;
             this.tbLog.AppendText( infoString );
         }
 
@@ -139,6 +141,7 @@ namespace BitTorrentCleaner
                 return;
             }
             this.btnStart.Enabled = false;
+            this.btnAnalys.Enabled = false;
             this._thr = new Thread( this.WorkDelete );
             this._thr.Start();
         }
@@ -159,6 +162,7 @@ namespace BitTorrentCleaner
                 return;
             }
             this.btnStart.Enabled = false;
+            this.btnAnalys.Enabled = false;
             this._thr = new Thread( this.WorkAnalys );
             this._thr.Start();
         }
